@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafafa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 40px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      font-family: 'Sans Serif';
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    .input-field {
+      width: 100%;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 10px;
+      padding-left: 35px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      background-color: #fafafa;
+      font-size: 14px;
+    }
+
+    .input-field i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #999;
+    }
+
+    .login-btn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px 0;
+      background-color: #0095f6;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+    }
+
+    .options input[type="checkbox"] {
+      margin-right: 4px;
+    }
+
+    .options a {
+      text-decoration: none;
+      color: #00376b;
+    }
+
+    .signup-box {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup-box a {
+      text-decoration: none;
+      color: #0095f6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1><i>Instagram</i></h1>
+
+    <div class="input-field">
+      <i class="fas fa-user"></i>
+      <input type="text" id="username" placeholder="Username">
+    </div>
+
+    <div class="input-field">
+      <i class="fas fa-lock"></i>
+      <input type="password" id="password" placeholder="Password">
+    </div>
+
+    <button class="login-btn" onclick="login()">Log in</button>
+
+    <div class="options">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+
+  <div class="signup-box">
+    Don't have an account? <a href="#">Sign up here.</a>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "" || pass === "") {
+        alert("Please enter both username and password.");
+      } else {
+        alert(`Logged in as ${user}`);
+      }
+    }
+  </script>
+
+</body>
+</html>
